@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           title: AppStrings.appName,
           theme: AppTheme.lightTheme,
           home: child,
-          initialRoute: AppRoutes.forgetPassword,
+          initialRoute: AppRoutes.onBoarding,
           onGenerateRoute: RouterGenerator.routeGenerator,
         );
       },

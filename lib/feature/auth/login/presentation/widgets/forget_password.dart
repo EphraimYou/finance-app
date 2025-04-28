@@ -5,7 +5,7 @@ import 'package:finance_app/core/utils/app_color.dart';
 import 'package:finance_app/core/utils/app_strings.dart';
 
 class ForgetPassword extends StatelessWidget {
-  final Function onTap;
+  final Function() onTap;
   const ForgetPassword({super.key, required this.onTap});
 
   @override
@@ -14,8 +14,8 @@ class ForgetPassword extends StatelessWidget {
       alignment: Alignment.centerRight,
       child: TextButton(
         style: TextButton.styleFrom(foregroundColor: AppColor.primaryColor),
-        child: Text(AppStrings.forgotPassword),
-        onPressed: () {},
+        onPressed: onTap,
+        child: const Text(AppStrings.forgotPassword),
       ),
     );
   }

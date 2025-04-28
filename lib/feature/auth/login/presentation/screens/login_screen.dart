@@ -22,9 +22,17 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _isVisible = true;
-  final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
+  late TextEditingController _emailController;
+  late TextEditingController _passwordController;
   final _formKey = GlobalKey<FormState>();
+
+  @override
+  void initState() {
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
+    super.initState();
+  }
+
   void _togglePassword() {
     setState(() {
       _isVisible = !_isVisible;
@@ -44,83 +52,90 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Scaffold(
         body: Padding(
           padding: EdgeInsets.fromLTRB(22.w, 22.h, 22.w, 0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomBackButton(),
-              SizedBox(height: 28.h),
-              Text(
-                AppStrings.loginMainTitle,
-                style: AppStyle.primaryHeadLineStyle,
-              ),
-              SizedBox(height: 32.h),
-              Form(
-                autovalidateMode: AutovalidateMode.onUserInteraction,
-                key: _formKey,
-                child: Column(
-                  spacing: 15.h,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomBackButton(),
+                SizedBox(height: 28.h),
+                Text(
+                  AppStrings.loginMainTitle,
+                  style: AppStyle.primaryHeadLineStyle,
+                ),
+                SizedBox(height: 32.h),
+                Form(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  key: _formKey,
+                  child: Column(
+                    spacing: 15.h,
+                    children: [
+                      CustomTextFormField(
+                        hintText: AppStrings.emailHint,
+                        validator:
+                            (value) => ValidateInput.validateEmail(value),
+                        controller: _emailController,
+                      ),
+                      CustomTextFormField(
+                        hintText: AppStrings.passwordHint,
+                        validator:
+                            (value) => ValidateInput.validatePassword(value),
+                        controller: _emailController,
+                        isPassword: true,
+                        onToggleObscureText: _togglePassword,
+                      ),
+                    ],
+                  ),
+                ),
+                ForgetPassword(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(AppRoutes.forgetPassword);
+                  },
+                ),
+                DefaultButton(
+                  text: AppStrings.login,
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      debugPrint('valid');
+                    }
+                  },
+                ),
+                SizedBox(height: 35.h),
+                DividerWidget(text: AppStrings.loginWith),
+                SizedBox(height: 30.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    CustomTextFormField(
-                      hintText: AppStrings.emailHint,
-                      validator: (value) => ValidateInput.validateEmail(value),
-                      controller: _emailController,
+                    SocialButton(
+                      imagePath: AppAssets.facebook,
+                      onTap: () {
+                        debugPrint('facebook');
+                      },
                     ),
-                    CustomTextFormField(
-                      hintText: AppStrings.passwordHint,
-                      validator:
-                          (value) => ValidateInput.validatePassword(value),
-                      controller: _emailController,
-                      isPassword: true,
-                      onToggleObscureText: _togglePassword,
+                    SocialButton(
+                      imagePath: AppAssets.google,
+                      onTap: () {
+                        debugPrint('google');
+                      },
+                    ),
+                    SocialButton(
+                      imagePath: AppAssets.apple,
+                      onTap: () {
+                        debugPrint('Apple');
+                      },
                     ),
                   ],
                 ),
-              ),
-              ForgetPassword(onTap: () {}),
-              DefaultButton(
-                text: AppStrings.login,
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    debugPrint('valid');
-                  }
-                },
-              ),
-              SizedBox(height: 35.h),
-              DividerWidget(text: AppStrings.loginWith),
-              SizedBox(height: 30.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SocialButton(
-                    imagePath: AppAssets.facebook,
-                    onTap: () {
-                      debugPrint('facebook');
-                    },
-                  ),
-                  SocialButton(
-                    imagePath: AppAssets.google,
-                    onTap: () {
-                      debugPrint('google');
-                    },
-                  ),
-                  SocialButton(
-                    imagePath: AppAssets.apple,
-                    onTap: () {
-                      debugPrint('Apple');
-                    },
-                  ),
-                ],
-              ),
-              // SizedBox(height: 150.h),
-              Spacer(),
-              TextNavigator(
-                description: AppStrings.dontHaveAccount,
-                buttonTitle: AppStrings.register,
-                onTap: () {
-                  Navigator.pushNamed(context, AppRoutes.register);
-                },
-              ),
-            ],
+
+                SizedBox(height: 150.h),
+                TextNavigator(
+                  description: AppStrings.dontHaveAccount,
+                  buttonTitle: AppStrings.register,
+                  onTap: () {
+                    Navigator.pushNamed(context, AppRoutes.register);
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
