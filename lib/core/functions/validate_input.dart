@@ -38,4 +38,11 @@ class ValidateInput {
     }
     return null;
   }
+
+  static String? validateOTP(String? password) {
+    if (password == null || password.isEmpty) {
+      return '';
+    }
+    return null;
+  }
 }
