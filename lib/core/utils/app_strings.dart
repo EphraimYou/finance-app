@@ -8,10 +8,31 @@ abstract class AppStrings {
   static const String password = 'Password';
   static const String resend = 'Resend';
   static const String verify = 'Verify';
+  static const String home = 'Home';
+  static const String statistics = 'Statistics';
+  static const String profile = 'Profile';
+  static const String card = 'My Card';
+  static const String mCard = 'M-Card';
+  static const String xCard = 'X-Card';
+  static const String yCard = 'Y-Card';
+  static const String balance = 'Balance';
+  static const String number = '2469 EGP';
+  static const String idNumber = '**** 2469';
+  static const String data = '16/08';
+
+  static const String sendMoney = 'Send money';
+  static const String payBill = 'Pay the bill';
+  static const String request = 'Request';
+  static const String contact = 'Contact';
+  static const String tackAcc = 'Take acc to acc';
+
   static const String comPassword = 'Confirm Password';
   static const String register = 'Register';
   static const String resetPassword = 'Reset Password';
   static const String otp = 'OTP Verification';
+  static const String welcome = 'Welcome back';
+  static const String name = 'Ephraim Youssef ';
+
   static const String backToLogin = 'Back to Login';
   static const String guest = 'Continue as a guest';
   static const String newPassword = 'Create New Password';
