@@ -6,6 +6,14 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static final lightTheme = ThemeData(
     useMaterial3: true,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: Colors.white,
+      selectedIconTheme: const IconThemeData(color: AppColor.primaryColor),
+      type: BottomNavigationBarType.shifting,
+      selectedItemColor: AppColor.primaryColor,
+      unselectedItemColor: Colors.grey,
+      elevation: 1,
+    ),
     primaryColor: AppColor.primaryColor,
     scaffoldBackgroundColor: AppColor.witheColor,
     fontFamily: Constants.mainFont,

@@ -5,6 +5,7 @@ import 'package:finance_app/feature/auth/otp/presentation/screens/forgot_passwor
 import 'package:finance_app/feature/auth/otp/presentation/screens/otp_screen.dart';
 import 'package:finance_app/feature/auth/otp/presentation/screens/password_changed_screen.dart';
 import 'package:finance_app/feature/auth/register/presentation/screens/register_screen.dart';
+import 'package:finance_app/feature/home/presentation/screens/layout_screen.dart';
 import 'package:finance_app/feature/onbording/welcome_screen.dart';
 // import 'package:finance_app/feature/onbording/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,8 @@ class RouterGenerator {
         return MaterialPageRoute(builder: (context) => const LoginScreen());
       case AppRoutes.register:
         return MaterialPageRoute(builder: (context) => const RegisterScreen());
+      case AppRoutes.home:
+        return MaterialPageRoute(builder: (context) => const LayoutScreen());
       case AppRoutes.otp:
         return MaterialPageRoute(builder: (context) => const OtpScreen());
       case AppRoutes.changePassword:

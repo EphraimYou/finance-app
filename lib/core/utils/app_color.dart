@@ -12,5 +12,10 @@ abstract class AppColor {
   static const Color borderColor = Color(0xFFE8ECF4);
   static const Color formColor = Color(0xFFF7F8F9);
   static const Color textFormColor = Color(0xFF8391A1);
+  static const Color blackColor = Color(0xFF1F2C37);
+  static const Color cardColor = Color(0xFFFDFDFD);
+  static const Color secondCardColor = Color(0xFF123333);
+  static const Color iconBackgroundColor = Color(0xFFECF1F6);
+  static const Color thirdCardColor = Color(0xFF3852A5);
   static const Color witheColor = Colors.white;
 }

@@ -15,12 +15,7 @@ class AppStyle {
     fontWeight: FontWeight.w500,
   );
   static TextStyle black16w600 = TextStyle(
-    color: AppColor.thirdColor,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w600,
-  );
-  static TextStyle gray12w500 = TextStyle(
-    color: AppColor.grayColor,
+    color: AppColor.blackColor,
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
   );
@@ -28,5 +23,20 @@ class AppStyle {
     color: AppColor.darkColor,
     fontSize: 15.sp,
     fontWeight: FontWeight.w700,
+  );
+  static TextStyle black500W12 = TextStyle(
+    color: AppColor.darkColor,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle white700W12 = TextStyle(
+    color: AppColor.witheColor,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle white500W16 = TextStyle(
+    color: AppColor.cardColor,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
   );
 }
