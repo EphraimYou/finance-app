@@ -1,16 +1,73 @@
-# finance_app
+# 💰 Finance App
 
-A new Flutter project.
+A modern, user-friendly finance management application built with clean architecture and powerful data visualization.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- ✅ **User-Friendly Interface**  
+  Designed with an intuitive UI/UX to help users manage their finances effortlessly across all devices.
 
-A few resources to get you started if this is your first Flutter project:
+- 📱 **Responsive Design**  
+  Fully responsive layout that adapts to mobile, tablet, and desktop screens.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 🏗️ **Clean Architecture**  
+  Follows a layered architecture pattern (Data, Domain, Presentation) for maintainability, testability, and scalability.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 📊 **Bar Chart Visualization**  
+  Integrated interactive bar charts to display:
+  - Expense trends
+  - Income analysis
+  - Monthly financial summary
+
+- 🔐 **Secure & Reliable**  
+  Built with best practices in mind to ensure performance and data security.
+
+## 🧱 Tech Stack
+
+- **Flutter** – UI development
+- **Dart** – Application logic
+- **Provider/Bloc/Cubit** – State management *(Choose your actual state management)*
+- **Charts Package** – For bar chart visualization
+- **Firebase / Local DB** – (If applicable) for authentication or storage
+- **Clean Architecture** – Domain-driven design with layered separation
+
+## 📸 Screenshots
+
+|--|--|--|--|--|
+| ![Login](screenshot_1.png) | ![Welcome](screenshot_1.png) | ![Register](screenshot_1.png) | ![Welcome](screenshot_1.png) | ![Register](screenshot_1.png) |
+| ![Login](screenshot_1.png) | ![Welcome](screenshot_1.png) | ![Register](screenshot_1.png) | ![Welcome](screenshot_1.png) | ![Register](screenshot_1.png) |
+| ![Home](screenshot_1.png) | ![Safe](screenshot_1.png) | ![Register](screenshot_1.png) |
+
+
+## 📦 Folder Structure (Clean Architecture)
+```bach
+lib/
+├── core/
+├── data/
+│ └── datasources/
+│ └── models/
+│ └── repositories/
+├── domain/
+│ └── entities/
+│ └── repositories/
+│ └── usecases/
+├── presentation/
+│ └── blocs/ or cubits/
+│ └── pages/
+│ └── widgets/
+```
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Flutter SDK installed
+- Dart SDK installed
+- Git installed
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/finance_app.git
+   cd finance_app
