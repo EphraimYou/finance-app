@@ -22,7 +22,8 @@ class LayoutScreen extends StatelessWidget {
                 currentIndex: cubit.currentIndex,
                 onTap: (index) => cubit.changeTap(index),
               ),
-              body: cubit.screens[cubit.currentIndex],
+              // body: cubit.screens[cubit.currentIndex],
+              body: cubit.screens[1],
             ),
           );
         },

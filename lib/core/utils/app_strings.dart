@@ -19,6 +19,16 @@ abstract class AppStrings {
   static const String number = '2469 EGP';
   static const String idNumber = '**** 2469';
   static const String data = '16/08';
+  //profile
+  static const String fullNameHint = 'Full Name';
+  static const String phoneHint = 'Phone Number';
+  static const String addressHint = 'Address';
+  static const String address = 'Cairo, Egypt';
+  static const String emailAddress = 'afraiemyous56@gmail.com';
+  static const String phoneNumber = '+20123456789';
+  //cards
+  static const String allCards = 'All Cards';
+  static const String reload = 'Reload';
 
   static const String sendMoney = 'Send money';
   static const String payBill = 'Pay the bill';
@@ -26,12 +36,16 @@ abstract class AppStrings {
   static const String contact = 'Contact';
   static const String tackAcc = 'Take acc to acc';
 
+  static const String income = 'Income';
+  static const String outcome = 'Outcome';
+
   static const String comPassword = 'Confirm Password';
   static const String register = 'Register';
   static const String resetPassword = 'Reset Password';
   static const String otp = 'OTP Verification';
   static const String welcome = 'Welcome back';
-  static const String name = 'Ephraim Youssef ';
+  static const String name = 'Ephraim Youssef';
+  static const String myProfile = 'My Profile';
 
   static const String backToLogin = 'Back to Login';
   static const String guest = 'Continue as a guest';

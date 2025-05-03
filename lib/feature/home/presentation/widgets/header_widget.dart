@@ -1,3 +1,4 @@
+import 'package:finance_app/core/components/leading_icon_widget.dart';
 import 'package:finance_app/core/utils/app_assets.dart';
 import 'package:finance_app/core/utils/app_color.dart';
 import 'package:finance_app/core/utils/app_strings.dart';
@@ -33,19 +34,7 @@ class HeaderWidget extends StatelessWidget {
             ],
           ),
           Spacer(),
-          IconButton(
-            onPressed: () {},
-            color: AppColor.primaryColor,
-            iconSize: 24,
-            style: ButtonStyle(
-              shape: WidgetStatePropertyAll(
-                const CircleBorder(
-                  side: BorderSide(color: AppColor.grayColor, width: 0.5),
-                ),
-              ),
-            ),
-            icon: const Icon(Icons.notifications),
-          ),
+          LeadingIconWidget(icon: Icons.notifications),
         ],
       ),
     );
