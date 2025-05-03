@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:finance_app/feature/cart/presentation/screens/card_screen.dart';
+import 'package:finance_app/feature/card/presentation/screens/card_screen.dart';
 import 'package:finance_app/feature/home/presentation/screens/home_screen.dart';
 import 'package:finance_app/feature/profile/presentation/screens/profile_screen.dart';
 import 'package:finance_app/feature/statistics/presentation/screens/statistics_screen.dart';
@@ -16,11 +16,13 @@ class HomeCubit extends Cubit<HomeState> {
   static HomeCubit get(context) => BlocProvider.of(context);
   List<Widget> screens = [
     HomeScreen(),
-    const CardScreen(),
-    const ProfileScreen(),
-    Container(color: Colors.white, child: Center(child: Text('Add Screen'))),
-    const StatisticsScreen(),
-    Container(color: Colors.blueAccent),
+    StatisticsScreen(),
+    Container(
+      color: Colors.white,
+      child: Center(child: Text('Add Screen New')),
+    ),
+    CardScreen(),
+    ProfileScreenNew(),
   ];
   int currentIndex = 0;
   void changeTap(int index) {
