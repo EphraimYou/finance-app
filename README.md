@@ -32,11 +32,11 @@ A modern, user-friendly finance management application built with clean architec
 - **Clean Architecture** – Domain-driven design with layered separation
 
 ## 📸 Screenshots
-
-|--|--|--|--|--|
-| ![Login](screenshot_1.png) | ![Welcome](screenshot_1.png) | ![Register](screenshot_1.png) | ![Welcome](screenshot_1.png) | ![Register](screenshot_1.png) |
-| ![Login](screenshot_1.png) | ![Welcome](screenshot_1.png) | ![Register](screenshot_1.png) | ![Welcome](screenshot_1.png) | ![Register](screenshot_1.png) |
-| ![Home](screenshot_1.png) | ![Safe](screenshot_1.png) | ![Register](screenshot_1.png) |
+| | | | | 
+|--|--|--|--|
+| ![Login](screenShots/Screenshot_1.png) | ![Welcome](screenShots/Screenshot_2.png) | ![Register](screenShots/Screenshot_3.png) | ![Welcome](screenShots/Screenshot_4.png) |
+|![Register](screenShots/Screenshot_5.png) | ![Login](screenShots/Screenshot_6.png) | ![Welcome](screenShots/Screenshot_7.png) | ![Register](screenShots/Screenshot_8.png) |
+|![Welcome](screenShots/Screenshot_9.png) | ![Register](screenShots/Screenshot_10.png) |![Safe](screenShots/Screenshot_2.png) | ![Register](screenShots/Screenshot_13.png) |
 
 
 ## 📦 Folder Structure (Clean Architecture)
